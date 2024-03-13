@@ -21,71 +21,47 @@ exercises: 1
 - How does the MarcEditor display MARC records?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-## Working with MARC files
-:::::::::::::::::::::::::::::::::::::::::  callout
+
+The MaRC format, or Machine Readable Cataloging format, is and old file type. 
+The base structure of these files was developed in the 1960s and 1970s, and it was
+originally structured to be stored on magnetic tape data storage. Today, the files
+are generally stored in a binary bitstream, which is not easily read without significant
+effort to "decode" the file. These files are called "binary" files (even though
+in the case of the MARC format, most of the characters can be read as they were 
+intended to be displayed, if the encoding format is known). These files are also
+frequently output by databases, and may have different file extensions. The table
+below summarizes the main file types you may encounter.
+
 ## MARC file types
+
 MarcEdit recognizes the following MARC file types:
 
-<table>
- <tr>
-  <td><strong>File type</strong>
-  </td>
-  <td><strong>File extension</strong>
-  </td>
-  <td><strong>Usage</strong>
-  </td>
- </tr>
- <tr>
-  <td>Binary MARC file
-  </td>
-  <td>mrc
-  </td>
-  <td>File format typically used in an  ILS or LSP. Other file extensions provided by vendors (ex. marc, dat, bin) are equivalent. Binary is format consisting of a series of sequential bytes, each of which is eight bits in length.
-  </td>
- </tr>
- <tr>
-  <td>Mnemonic MARC Text File
-  </td>
-  <td>mrk
-  </td>
-  <td>File format used by MarcEdit that is a human readable version of the binary file.
-  </td>
- </tr>
- <tr>
-  <td>MARC UTF-8 Text File
-  </td>
-  <td>mrk8
-  </td>
-  <td>Legacy file format for MARC mnemonic files saved with UTF8 encoding.
-  </td>
- </tr>
- <tr>
-  <td>MARCXML file
-  </td>
-  <td>xml
-  </td>
-  <td>A MARC file expressed in the eXtensible Markup format or a text-based format for representing structured information.
-  </td>
- </tr>
- </table>
-To work with a MARC file in the MARCEditor your file needs to be in MARC mnemonic format. If you only have a binary file, then that file needs to be converted to the mnemonic format.
+Table: MaRC File Types
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+| File type | File extension | Usage |
+| -------- | :-: | ------------------------------------ |
+| Binary MARC file | `mrc` | File format typically used in an  ILS or LSP. Other file extensions provided by vendors (ex. marc, dat, bin) are equivalent. Binary is format consisting of a series of sequential bytes, each of which is eight bits in length. |
+| MARCEdit Mnemonic file | `mrk` | File format used by MarcEdit that is a human readable version of the binary file. |
+| MARC UTF-8 Text File | `mrk8` | Legacy file format for MARC mnemonic files saved with UTF8 encoding. |
+| MARCXML file | `xml` | A MARC file expressed in the eXtensible Markup format or a text-based format for representing structured information. |
 
-### MARC Tools
+To work with a MARC file in the MARCEditor your file needs to be in MARC mnemonic format. If you have a binary file, then that file needs to be converted to the mnemonic format.
 
-To work with MARC data files or convert between metadata formats for library bibliographic data recognized by MarcEdit, click on the MARC Tools icon that has the crossed hammer and spanner in the upper left hand corner of the main menu. The available features are:
 
-- MarcBreaker: This "breaks" the MARC binary file into a readable (mnemonic) format that can be edited in the MarcEditor.
-- MarcMaker: This takes the readable (mnemonic) format MARC data file and creates the MARC binary file.
-- MARC21 to MARC21XML: This converts a MARC21 file to MARC21XML.
-- MARC21XML to MARC21: This converts a MARC21XML file to a MARC21 binary file.
-- MARC to JSON: This converts a MARC21 file to a JSON file.
-- JSON to MARC: This converts a JSON file to a MARC21 file.
-- JSON to XML: This converts a JSON file to XML.
-- XML to JSON: This converts an XML file to JSON.
+### MARCEdit's MaRC Conversion Tools
 
-The conversions from one encoding standard to another, as in MARC21 to MARC21XML, rely on eXtensible stylesheets. MarcEdit comes with several default stylesheets which come from those maintained by the Library of Congress. If you are familiar with stylesheets, you can also create your own.
+To work with MARC binary data files, or to convert between metadata formats for library bibliographic data recognized by MarcEdit, click on the MARC Tools icon that has the crossed hammer and spanner in the upper left hand corner of the main menu. The available features are:
+
+- `MarcBreaker`: This "breaks" the MARC binary file into a readable (mnemonic) format that can be edited in the MarcEditor.
+- `MarcMaker`: This takes the readable (mnemonic) format MARC data file and creates the MARC binary file.
+- `MARC21 to MARC21XML`: This converts a MARC21 file to MARC21XML.
+- `MARC21XML to MARC21`: This converts a MARC21XML file to a MARC21 binary file.
+- `MARC to JSON`: This converts a MARC21 file to a JSON file.
+- `JSON to MARC`: This converts a JSON file to a MARC21 file.
+- `JSON to XML`: This converts a JSON file to XML.
+- `XML to JSON`: This converts an XML file to JSON.
+
+The conversions from one encoding standard to another, as in MARC21 to MARC21XML, rely on eXtensible stylesheet transformations, or XSLT. MarcEdit comes with several default stylesheets based on those maintained by the Library of Congress. If you are familiar with XSLT, you can also create your own.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
