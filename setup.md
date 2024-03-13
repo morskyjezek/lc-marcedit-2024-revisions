@@ -64,12 +64,15 @@ After downloading MarcEdit and once you launch the installation the first time, 
 
 ## Downloading the data
 
-For this lesson, you need to download our sample file from the Library Carpentries MarcEdit GitHub repository. Go to [this lesson's GitHub page](https://github.com/morskyjezek/lc-marcedit-2024-revisions/tree/main/episodes/data) to download the sample data file called marc\_sample\_data.mrc. Then, click the download button on the right hand side. This MARC file follows the MARC21 standard and is encoded in UTF-8.
+For this lesson, you need to download our sample file from the Library Carpentries MarcEdit GitHub repository. Navigate to [the `episodes/data` folder at this lesson's GitHub page](https://github.com/morskyjezek/lc-marcedit-2024-revisions/tree/main/episodes/data) to download the sample data file: `sample_data_UMPEBC.dat`. Choose that file by clicking on the file name, then click "Download raw file" to the right of the view panel. This is a MARC file from the University of Michigan Press, which contains records of that Press's eBook collection. The file does not have a MARC extension, but the data follows the MARC21 standard and is encoded in UTF-8.
 
-- Look for the file [`sample_data_UMPEBC.dat`](data) to view data for this lesson.
-  - If the file opens in a viewer, just save or download the file.
-  - If the above link takes you to GitHub, click the download button ![](fig/downloadButton.png){alt='GitHub Download Button icon'}
-- You should download all desired files so they can be used locally on your own computer.
+### Step by step
+
+- Look for the file `sample_data_UMPEBC.dat`:
+  - Go to this lesson's GitHub page and [look for the `episodes/data/` folder]((https://github.com/morskyjezek/lc-marcedit-2024-revisions/tree/main/episodes/data)).
+  - Click on the name of the sample file: `sample_data_UMPEBC.dat`.
+  - To the right of the file view, click the download button ![](fig/downloadButton.png){alt='GitHub Download Button icon'} to "Download raw file".
+- Download any files so they can be used locally on your own computer.
 
 ## Getting help
 
