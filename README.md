@@ -14,7 +14,7 @@ Lesson Maintainers communication is via Slack.
 ## License
 
 All Software, Data, and Library Carpentry instructional material is made available under the [Creative Commons Attribution
-license](https://github.com/LibraryCarpentry/lc-marcedit/blob/gh-pages/LICENSE.md).
+license](LICENSE.md).
 
 ## Contributing
 
@@ -26,15 +26,19 @@ All participants should agree to abide by The Carpentries [Code of Conduct](http
 
 ## Authors
 
-Library Carpentry is authored and maintained through issues, commits, and pull requests from the community.
+This repository reflects modifications by Jesse Johnston from the 
+source created and hosted by Library Carpentry. The Library Carpentry version
+is authored and maintained through issues, commits, and pull requests from the community.
 
 ## Citation
 
-Library Carpentry: MarcEdit (2019, September). [https://github.com/LibraryCarpentry/lc-marcedit](https://github.com/LibraryCarpentry/lc-marcedit).
+Jesse Johnston and others, Library Carpentry: MarcEdit (March 2024). [https://github.com/morskyjezek/lc-marcedit-2024-revisions](https://github.com/morskyjezek/lc-marcedit-2024-revisions).
 
 ## Acknowledgement
 
-Some of the content in this MarcEdit lesson was initially based on CC-BY materials developed by Owen Stephens in November 2015.
+The revisions in this repository reflect modifications by Jesse Johnston, 
+made in March 2024 to modify the lesson to use a new dataset. 
+Some of the content in this MarcEdit lesson was initially based on CC-BY materials developed by Owen Stephens in November 2015. 
 
 ## Checking and Previewing the Lesson
 
