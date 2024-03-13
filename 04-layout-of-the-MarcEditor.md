@@ -14,13 +14,14 @@ exercises: 0
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - What is the MarcEditor?
-- How are MARC files organized in the MarcEditor
+- How are MARC files displayed in the MarcEditor
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## The MarcEditor
-
-The MarcEditor is a discreet utility within MarcEdit that enables you to work with your MARC data in an easily human and machine readable format.
+The MarcEditor is a discrete utility within MarcEdit that allows you to work with
+MARC data in a format that is more easily readable by human editors. 
+The layout is called MARC mnemonic, which is used by MarcEdit. This layout is a 
+very tall, and relatively thin plain text data serialization format. 
 
 ## MarcEditor Top Level Menu
 
