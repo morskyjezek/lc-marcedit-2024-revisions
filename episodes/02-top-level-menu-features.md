@@ -8,7 +8,7 @@ exercises: 3
 
 - Locate top level menu features
 - Explain the top level menu features
-s
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
@@ -39,7 +39,7 @@ The Tools menu allows you to access a number of different basic and advanced fea
 - Delimited Text Translator
 - Utilities that include a verify URL tool
 
-One thing you'll notice is that there are both shortcuts, linked icons, and menu options that lead to the same features or tools. For example, to update your preferences, you can go to Tools → Preferences, use the keyboard shortcut of Ctrl+Shift+P, or click on the gearbox in the upper left hand corner of the main window.
+You may notice that there are both shortcuts, linked icons, and menu options that lead to the same features or tools. For example, to update your preferences, you can go to Tools → Preferences, use the keyboard shortcut of `Ctrl`+`Shift`+`P`, or click on the gearbox in the upper left hand corner of the main window.
 
 #### Preferences
 
@@ -59,7 +59,7 @@ In MarcEdit, Preferences allow you to configure the main window and various tool
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Name three other tools or features that can be changed in Preferences.
+## What other tools or features can be changed in Preferences?
 
 :::::::::::::::  solution
 
