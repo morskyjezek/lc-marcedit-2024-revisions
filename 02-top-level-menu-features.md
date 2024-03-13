@@ -8,7 +8,7 @@ exercises: 3
 
 - Locate top level menu features
 - Explain the top level menu features
-
+s
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
@@ -18,8 +18,6 @@ exercises: 3
 - Where are the top level features located?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Getting Started with MarcEdit
 
 ## Top Level Menu Features
 
