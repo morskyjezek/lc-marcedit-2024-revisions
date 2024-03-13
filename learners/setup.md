@@ -69,9 +69,9 @@ For this lesson, you need to download our sample file from the Library Carpentri
 ### Step by step
 
 - Look for the file `sample_data_UMPEBC.dat`:
-  - Go to this lesson's GitHub page and [look for the `episodes/data/` folder]((https://github.com/morskyjezek/lc-marcedit-2024-revisions/tree/main/episodes/data)).
+  - Go to this lesson's GitHub page and [look for the `episodes/data/` folder](https://github.com/morskyjezek/lc-marcedit-2024-revisions/tree/main/episodes/data).
   - Click on the name of the sample file: `sample_data_UMPEBC.dat`.
-  - To the right of the file view, click the download button ![Detail graphic of GitHub download button](fig/downloadButton.png){alt='GitHub Download Button icon'} to "Download raw file".
+  - To the right of the file view, click the download button ![](fig/downloadButton.png){alt='GitHub Download Button icon'} to "Download raw file".
 - Download any files so they can be used locally on your own computer.
 
 ## Getting help
