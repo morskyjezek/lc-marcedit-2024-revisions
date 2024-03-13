@@ -14,7 +14,7 @@ exercises: 0
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - What is the MarcEditor?
-- How are MARC files displayed in the MarcEditor
+- How are MARC files displayed in the MarcEditor?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
