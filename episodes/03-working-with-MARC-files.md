@@ -72,15 +72,20 @@ To ensure the integrity of your data you need to select the correct character en
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  checklist
+:::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Break a MARC Binary File
 
-To transform our binary MARC file (.mrc) into MARC mnemonic human readable format (.mrk), you use the MarcBreaker.
+Use MarcEdit's "Mark Breaker" to transform the binary MARC data file (`.dat`) into 
+the MARC mnemonic "human readable"" format (`.mrk`). 
+Expand the elements below for the step-by-step guide.
 
-##### Break a MARC (.mrc) file to use in the MarcEditor
+::: solution
 
-1. Launch MarcEdit and from the main window click on the MARC Tools Icon.
+## Transform a MARC binary file for use in the MarcEditor
+
+1. Launch MarcEdit. 
+1. In the main window click on the "MARC Tools" icon.
 2. In the MARC Tools window, Select Operation → MARCBreaker.
 3. In the field, Select Data to Process, click the file folder image to the right of the Open box to browse for the sample MARC data file (.mrc). Double click the found file to select it.
 4. Next, you will need save your file in the MARC mnemonic format (.mrk) by clicking the file folder to the right of the Save As box. Select the location and name you would like to give your new file.
@@ -88,11 +93,13 @@ To transform our binary MARC file (.mrc) into MARC mnemonic human readable forma
 6. Click execute.
 7. Once you click execute the newly created .mrk file will be available to open in the MarcEditor. Under Results at the bottom of the window you will see a count of the records in your file. Click Edit Records to open the .mrk file in the MarcEditor.
 
-**Note:** When you break a .mrc file and create a new .mrk file for editing in the MarcEditor, you are making a copy of your data in a new file format. As a result, any edits you make to the .mrk file in the MarcEditor will not automatically be reflected in the original .mrc file. We will cover saving and compiling (using the MarcMaker) to create an updated .mrc file in an upcoming lesson.
+**Note:** When you break a binary file and create a new `.mrk` file for editing in the MarcEditor, you are making a copy of your data in a new file format. As a result, any edits you make to the `.mrk` file in the MarcEditor will not automatically be reflected in the original file. We will cover saving and compiling (using the MarcMaker) to create an updated file later on.
+::: 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## MARC Record layout in the MarcEditor
+
 You should now see the MARC records from the file displaying in the MarcEditor:
 
 ![](fig/marc_sample_data.png){alt='MarcEditor screen with file open'}
@@ -158,11 +165,12 @@ If you change your preferences for the MarcEditor, the tool used to work with MA
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- MarcEdit can work with a variety of file formats
-- The MARC Tools Icon allow you to convert data from one file format to another
+- MARC files may be encoded in a variety of formats and text encodings
+- MarcEdit can work with many of these differing formats
+- The MARC Tools Icon allows you to convert data from one file format to another
 - The MarcEditor works with a MarcEdit specific mnemonic format of MARC records (.mrk)
-- It is necessary to break a MARC binary file to work with that MARC data in the MarcEditor. The extension of these easily readable MARC files are .mrk rather than the binary extension of .mrc
-- Understanding the layout (syntax) of MARC records in the MarcEditor is key to working with the records.
+- It is necessary to break a MARC binary file to work with that MARC data in the MarcEditor. The extension of these readable MARC files is `.mrk` rather than `.mrc`
+- Understanding the format and syntax of the MARC mnemonic format is key to working with MarcEdit
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
