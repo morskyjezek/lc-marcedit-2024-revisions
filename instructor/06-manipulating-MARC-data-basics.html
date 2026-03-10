@@ -18,13 +18,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="lc-logo" alt="Library Carpentry" src="../assets/images/library-logo.svg"><span class="badge text-bg-warning">
-          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
-            <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#field-testing-alpha-stage" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
-              Alpha
+        <img id="lc-logo" alt="Library Carpentry" src="../assets/images/library-logo.svg"><span class="badge text-bg-info">
+          <abbr title="This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.">
+            <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
+              <i aria-hidden="true" class="icon" data-feather="alert-circle" style="border-radius: 5px"></i>
+              Beta
             </a>
-            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
+            <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
           </abbr>
         </span>
 
@@ -56,6 +56,7 @@
             </li>
           </ul></li>
       </div>
+
 
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -118,11 +119,11 @@
   MarcEdit Workshop
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 36%" class="percentage">
-    36%
+<aside class="col-md-12 lesson-progress"><div style="width: 29%" class="percentage">
+    29%
   </div>
   <div class="progress library">
-    <div class="progress-bar library" role="progressbar" style="width: 36%" aria-valuenow="36" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar library" role="progressbar" style="width: 29%" aria-valuenow="29" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -263,7 +264,7 @@
       <div class="accordion-body">
         <ul><li><a href="#manipulating-marc-data">Manipulating MARC data</a></li>
 <li><a href="#working-with-marc-fixed-fields">Working with MARC fixed fields</a></li>
-<li><a href="#saving-compiling-and-version-control">Saving, Compiling and Version Control</a></li>
+<li><a href="#saving-and-compiling">Saving and Compiling</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -364,13 +365,13 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Manipulating MARC data basics</h1>
-        <p>Last updated on 2024-03-13 |
+        <p>Last updated on 2026-03-10 |
 
         <a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/edit/main/episodes/06-manipulating-MARC-data-basics.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 46 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 50 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -410,54 +411,78 @@ indicators, and fixed fields</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="manipulating-marc-data">Manipulating MARC data<a class="anchor" aria-label="anchor" href="#manipulating-marc-data"></a></h2>
-<hr class="half-width"><p>We’ve seen how we can manually and individually edit records in the
+<hr class="half-width"><p>We have seen how we can manually and individually edit records in the
 MarcEditor, however, MarcEdit provides a number of more powerful ways to
-manipulate our MARC data. Fields, subfields, indicators can be added,
-removed, or changed. Fixed fields can be corrected. Fields and subfields
-specific to RDA can be added while AACR2 conventions are removed. It is
-possible to work with a subset of MARC data and then incorporate those
-changes into the original whole MARC data set. The variations sometime
-seem endless and give more weight to the nickname of MarcEdit, the swiss
-army knife of MARC data.</p>
+manipulate our MARC data. Fields, subfields, and indicators can be
+added, removed, or changed. Fixed fields can be corrected. Fields and
+subfields specific to RDA can be added while AACR2 conventions are
+removed. It is possible to work with a subset of MARC data and then
+incorporate those changes into the original whole MARC data set. The
+variations sometimes seem endless and give more weight to the nickname
+of MarcEdit, the Swiss army knife of MARC data.</p>
 <div class="section level3">
 <h3 id="find-find-all-and-replace">Find, Find All, and Replace<a class="anchor" aria-label="anchor" href="#find-find-all-and-replace"></a></h3>
 <p>Like many other applications, the MarcEditor offers the ability to
 Find, Find All, and Replace.</p>
-<p>Find: Find will search as a keyword what you enter into the Find
-window search box. This option will only search the current page in the
-MarcEdit. Remember that the default settings splits the MARC records
-into 100 for each page. Find will only search those records on the page
-you are currently on.</p>
-<p>Find All: Find all will search for your search terms entered in the
-Find window search box over all the pages, or all your MARC records.</p>
-<p>Replace: Replace works alongside Find or Find all. You have the
-option to Replace just those on the page or Replace all where the
-replace occurs on all pages in all records.</p>
-<p>If you want to Find or Find all a MARC field, you will need to
-include the equals sign before the MARC field. For example, if you type
-in the search box 856, Find or Find All will search for 856 as a keyword
-anywhere. If there is a title such as “The Jourey of the 856 people”,
-this will then show up in your search results. If you search for =856,
-it will find anything with that string. If for example there is a title
-with “… =856 …” then this will also appear in the search results.
-Typically the equals before the MARC tage will bring up that MARC
-tag.</p>
+<p><strong>Find</strong>: Find will perform a keyword search for your
+search terms entered in the Find window search box. Each time you click
+“Find”, you will be brought to the next instance of your search terms on
+the current page of the MarcEditor. Remember that the default settings
+split the MARC records into 100 for each page. Find will only search
+those records on the page you are currently on.</p>
+<p><strong>Find All</strong>: Find all will search for your search terms
+entered in the Find window search box over all the pages, or all your
+MARC records. When you click “Find All” a new window will open listing
+each instance of your search terms. Double clicking a result will take
+you to the result in the MarcEditor.</p>
+<p><strong>Replace</strong>: Replace works alongside Find or Find all.
+You have the option to Replace just those on the page or Replace all
+where the replace occurs on all pages in all records.</p>
+<div id="find-textreplace-text-and-find-all-results-popup-windows" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="find-textreplace-text-and-find-all-results-popup-windows" class="callout-inner">
+<h3 class="callout-title">Find Text/Replace Text and Find All Results
+Popup Windows</h3>
+<div class="callout-content">
+<p>The popup window for the Find Text/Replace Text function and the
+secondary popup window for your Find All search results will not close
+automatically. You will need to close these windows when you are done
+performing your find/replace actions.</p>
+</div>
+</div>
+</div>
+<p>If you want to Find or Find all for a specific MARC field, you will
+need to include the equals sign before the MARC field. For example, if
+you type in the search box 856, Find or Find All will search for 856 as
+a keyword anywhere. If there is a title such as “The Journey of 856
+people”, this will then show up in your search results. If you search
+for =856, it will find anything with that string. If for example there
+is a title with “… =856 …” then this will also appear in the search
+results. Typically the equals before the MARC tage will bring up that
+MARC tag. By extension, if you want to find a specific MARC field that
+have specific indicators, you will need to include 2 spaces after the
+MARC field as in =856 40.</p>
 <div id="find-find-all-and-replace-using-the-marc-field-856" class="callout checklist">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
+<span class="callout-header">Checklist</span>
 <div id="find-find-all-and-replace-using-the-marc-field-856" class="callout-inner">
-<h3 class="callout-title">Find, Find All, and Replace using the MARC field 856</h3>
+<h3 class="callout-title">Find, Find All, and Replace using the MARC
+field 856</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Go to Edit-&gt;Find (or CTRL+F)</li>
 <li>In the search box in the new window, type in 856</li>
 <li>Click Find</li>
-<li>What results to you see?</li>
+<li>What results do you see?</li>
 <li>Close that window</li>
 <li>Go to Edit-&gt;Find (or CTRL+F)</li>
 <li>In the search box in the new window, type in =856</li>
 <li>Click Find All</li>
-<li>What results to you see</li>
+<li>What results do you see</li>
 </ol></div>
 </div>
 </div>
@@ -465,11 +490,12 @@ tag.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="add-a-proxy-to-the-marc-field-856" class="callout-inner">
 <h3 class="callout-title">Add a proxy to the MARC field 856</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Find those MARC fields 856 where there is a subfield 3 for Full text
-follow by a subfield u</li>
+followed by a subfield u</li>
 <li>Add this proxy <a href="https://proxy.edu?url=" class="external-link uri">https://proxy.edu?url=</a>
 </li>
 </ol></div>
@@ -495,13 +521,17 @@ text:$uhttps://proxy.edu?url=</li>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="find-and-replace" class="callout-inner">
 <h3 class="callout-title">Find and Replace</h3>
 <div class="callout-content">
-<p>Remember to always verify that the search results of the Find or Find
-All. Find or Find all will search that exact phrase or string that you
-put into the search box either on that page (Find) or in every record
-(Find all).</p>
+<p>Remember to always verify the search results of the Find or Find All
+and profile your data before making changes. Find or Find all will
+search for the exact phrase or string that you put into the search box
+either on that page (Find) or in every record (Find all). In the example
+above, if your records contain MARC fields 856 with different $3 data
+(for example: =856 40$3Online Access:$u) the replace above will not add
+the proxy to those 856 fields. You will need to do another replace.</p>
 </div>
 </div>
 </div>
@@ -512,7 +542,7 @@ put into the search box either on that page (Find) or in every record
 MarcEditor and select Add/Delete Field. This will open a new Batch
 Editing Tools window. The Add/Delete Field functions are on the same
 menu level and you will need to select the action of either add or
-delete using the buttons on the right hand side.</p>
+delete using the buttons on the right-hand side.</p>
 <p>In the top middle section of the window, there are two data entry
 fields: Field and Field Data. Enter the MARC field number you want to
 add or delete in the Field dialogue box. Then enter the indicators,
@@ -540,6 +570,7 @@ option Remove if field data does not match can be selected.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="add-and-then-delete-a-marc-field" class="callout-inner">
 <h3 class="callout-title">Add and then delete a MARC field</h3>
 <div class="callout-content">
@@ -579,6 +610,7 @@ by clicking on the arrow on the right side and selecting Preview in the
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="metacharacter-syntax-in-the-marceditor" class="callout-inner">
 <h3 class="callout-title">Metacharacter syntax in the MarcEditor</h3>
 <div class="callout-content">
@@ -593,8 +625,10 @@ if you enter 24X, that edit will act on fields 240-249; if you enter
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="delete-a-range-of-marc-fields-that-begin-with-a-number" class="callout-inner">
-<h3 class="callout-title">Delete a range of MARC fields that begin with a number</h3>
+<h3 class="callout-title">Delete a range of MARC fields that begin with
+a number</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Verify your data contains multiple 9XX fields.</li>
 <li>Delete all 9XX fields.</li>
@@ -629,7 +663,7 @@ field<a class="anchor" aria-label="anchor" href="#add-delete-or-change-informati
 Edit Subfield Data. A new Batch Editing Tools window will open (notice
 that this is the same window that opened for Add/Delete a field, you can
 also navigate between the MarcEdit Batch Editing Tools using the labels
-on the left hand side of the window). From here you can add a new
+on the left-hand side of the window). From here you can add a new
 subfield, delete a subfield, or replace text in a subfield. Set your
 desired subfield edit conditions by selecting the appropriate option(s)
 from the Search Options list.</p>
@@ -638,7 +672,7 @@ text you would like to add in that subfield is entered in Replace With
 box. Select New subfield only from the Search Options below and then
 click Replace Text. Even though you are adding a subfield, you still
 click Replace Text. For adding a subfield, the information that goes in
-that field doesn’t go in the box called Field Data, see the example
+that field does not go in the box called Field Data, see the example
 below.</p>
 <p>To delete a subfield, enter the MARC field and then the subfield.
 Select Delete Subfield from the Search Options and then click Remove
@@ -652,13 +686,14 @@ Text.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="ability-to-preview-and-special-undo" class="callout-inner">
 <h3 class="callout-title">Ability to Preview and Special Undo</h3>
 <div class="callout-content">
 <p>As of version 7.5, you can preview all of these changes before making
 them. If you complete a batch edit that produces unexpected or
 undesirable results, you can perform a Special Undo by selecting Edit →
-Special Undo. This will only on your most recent batch edit. If you
+Special Undo. This will only act on your most recent batch edit. If you
 perform an action after your batch edit, Special Undo will not undo your
 batch change but the action you just performed. Undo and Special Undo
 are different. Undo undoes a manual edit whereas Special Undo undoes a
@@ -670,6 +705,7 @@ bulk edit.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="add-and-then-delete-a-marc-subfield" class="callout-inner">
 <h3 class="callout-title">Add and then Delete a MARC subfield</h3>
 <div class="callout-content">
@@ -719,8 +755,10 @@ indicators entered in the Replace With Indicators box.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
 <div id="change-an-indicator-for-a-marc-field-in-your-marc-data" class="callout-inner">
-<h3 class="callout-title">Change an indicator for a MARC field in your MARC data</h3>
+<h3 class="callout-title">Change an indicator for a MARC field in your
+MARC data</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Change the first indicator of the MARC field 050 to 1 for those MARC
 fields 050 that have a first indicator blank and a second indicator
@@ -755,14 +793,16 @@ put your cursor on that fixed field, such as an 008 or 006, then go to
 Edit and select Field 006 or Field 008. This will open up a window where
 you can edit the fixed field for that specific MARC record. To add one
 fixed field, put your cursor on the line where you want that fixed field
-inserted, go to Edit and then select Field 006 or 008. In the window,
+inserted, go to Edit, and then select Field 006 or 008. In the window,
 edit the fields for that specific record.</p>
 <figure><img src="../fig/fixedFields.png" alt="MarcEdit fixed fields editor" class="figure mx-auto d-block"></figure><div id="batch-editing-fixed-fields-in-multiple-marc-records" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="batch-editing-fixed-fields-in-multiple-marc-records" class="callout-inner">
-<h3 class="callout-title">Batch Editing Fixed Fields in Multiple MARC Records</h3>
+<h3 class="callout-title">Batch Editing Fixed Fields in Multiple MARC
+Records</h3>
 <div class="callout-content">
 <p>Sometimes it is necessary to change a fixed field for all records in
 your MARC data. You can use the Edit Field function. For this, you will
@@ -775,17 +815,17 @@ function and regular expressions which will be covered in Lesson 09.</p>
 Add/Delete. You will need to have the 006 already formed. For example,
 you can add one 006 using the method explained above, copy that, and
 then use the Tools, Add field, to then add the 006. Remember that fixed
-fields don’t have indicators.</p>
+fields do not have indicators.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="saving-compiling-and-version-control">Saving, Compiling and Version Control<a class="anchor" aria-label="anchor" href="#saving-compiling-and-version-control"></a></h2>
+</section><section><h2 class="section-heading" id="saving-and-compiling">Saving and Compiling<a class="anchor" aria-label="anchor" href="#saving-and-compiling"></a></h2>
 <hr class="half-width"><p>The MARC data that you manipulate in the MarcEditor is in a human and
-computer readable mnemonic <code>.mrk</code> file format that was broken
+computer-readable mnemonic <code>.mrk</code> file format that was broken
 from the original binary <code>.mrc</code> file. You will notice that
-the file name of the file you’re working on, displayed at top of the
-MarcEditor, has the file extension <code>.mrk</code>. If you look at the
-file in your file directory, the file icon color is blue whereas the
+the file name of the file you are working on, displayed at the top of
+the MarcEditor, has the file extension <code>.mrk</code>. If you look at
+the file in your file directory, the file icon color is blue whereas the
 binary <code>.mrc</code> MARC file icon is purple.</p>
 <div class="section level3">
 <h3 id="saving">Saving<a class="anchor" aria-label="anchor" href="#saving"></a></h3>
@@ -807,7 +847,7 @@ edited <code>.mrc</code> file. Using the same file name as your original
 MarcMaker tool. To use the MarcMaker, from the Main Menu select MARC
 Tools. In the MARC Tools window, under Select Operation choose
 MarcMaker. Under Select Data to Process, in the Open box, select the
-<code>.mrk</code> file you’d like to compile. In the Save As box,
+<code>.mrk</code> file you would like to compile. In the Save As box,
 specify the location and file name for your new <code>.mrc</code> file.
 Set the character encoding options as required, and then click Execute.
 Once compiled, you will see a message under Results specifying the
@@ -816,8 +856,8 @@ number of records in the new <code>.mrc</code> file.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>MarcEdit can be used to edit any part of the MARC data including the
 Leader, fixed fields, fields, indicators, subfields and the content in
@@ -857,15 +897,17 @@ validate MARC.</li>
 	
         | <a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:jajohnst@umich.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        <a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/blob/main/" class="external-link">Cite</a>
+        | <a href="mailto:jajohnst@umich.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+		</div>
+		<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.10" class="external-link">sandpaper (0.16.10)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.7" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
-			</div>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.0.9)</a></p>
+		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
 		<a href="#top">
@@ -875,10 +917,10 @@ validate MARC.</li>
   <script type="application/ld+json">
     {
   "@context": "https://schema.org",
-  "@type": "TrainingMaterial",
+  "@type": "LearningResource",
   "@id": "https://morskyjezek.github.io/lc-marcedit-2024-revisions/instructor/06-manipulating-MARC-data-basics.html",
   "inLanguage": "en",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+  "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries, marc, bibliographic",
   "name": "Manipulating MARC data basics",
@@ -886,8 +928,8 @@ validate MARC.</li>
   "url": "https://morskyjezek.github.io/lc-marcedit-2024-revisions/instructor/06-manipulating-MARC-data-basics.html",
   "identifier": "https://morskyjezek.github.io/lc-marcedit-2024-revisions/instructor/06-manipulating-MARC-data-basics.html",
   "dateCreated": "2024-03-13",
-  "dateModified": "2024-03-13",
-  "datePublished": "2024-12-10"
+  "dateModified": "2026-03-10",
+  "datePublished": "2026-03-10"
 }
 
   </script><script>

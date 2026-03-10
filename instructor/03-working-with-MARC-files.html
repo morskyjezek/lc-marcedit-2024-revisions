@@ -18,13 +18,13 @@
   <div class="container-fluid top-nav-container">
     <div class="col-md-8">
       <div class="large-logo">
-        <img id="lc-logo" alt="Library Carpentry" src="../assets/images/library-logo.svg"><span class="badge text-bg-warning">
-          <abbr title="This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.">
-            <a href="https://cdh.carpentries.org/the-lesson-life-cycle.html#field-testing-alpha-stage" class="external-link alert-link">
-              <i aria-hidden="true" class="icon" data-feather="alert-triangle" style="border-radius: 5px"></i>
-              Alpha
+        <img id="lc-logo" alt="Library Carpentry" src="../assets/images/library-logo.svg"><span class="badge text-bg-info">
+          <abbr title="This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.">
+            <a href="https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html" class="external-link alert-link">
+              <i aria-hidden="true" class="icon" data-feather="alert-circle" style="border-radius: 5px"></i>
+              Beta
             </a>
-            <span class="visually-hidden">This lesson is in the alpha phase, which means that it has been taught once and lesson authors are iterating on feedback.</span>
+            <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
           </abbr>
         </span>
 
@@ -56,6 +56,7 @@
             </li>
           </ul></li>
       </div>
+
 
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -118,11 +119,11 @@
   MarcEdit Workshop
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 15%" class="percentage">
-    15%
+<aside class="col-md-12 lesson-progress"><div style="width: 12%" class="percentage">
+    12%
   </div>
   <div class="progress library">
-    <div class="progress-bar library" role="progressbar" style="width: 15%" aria-valuenow="15" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar library" role="progressbar" style="width: 12%" aria-valuenow="12" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -234,9 +235,7 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#marc-file-types">MARC file types</a></li>
-<li><a href="#marc-record-layout-in-the-marceditor">MARC Record layout in the MarcEditor</a></li>
-<li><a href="#setting-marceditor-preferences">Setting MarcEditor Preferences</a></li>
+        <ul><li><a href="#understanding-marc-21-in-marcedit">Understanding MARC 21 in MarcEdit</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -364,13 +363,13 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Working with MARC files</h1>
-        <p>Last updated on 2024-03-13 |
+        <p>Last updated on 2026-03-10 |
 
         <a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/edit/main/episodes/03-working-with-MARC-files.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 21 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 19 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -407,81 +406,109 @@ MarcEditor</li>
 </div>
 </div>
 </div>
-<p>The MaRC format, or Machine Readable Cataloging format, is and old
-file type. The base structure of these files was developed in the 1960s
-and 1970s, and it was originally structured to be stored on magnetic
-tape data storage. Today, the files are generally stored in a binary
-bitstream, which is not easily read without significant effort to
-“decode” the file. These files are called “binary” files (even though in
-the case of the MARC format, most of the characters can be read as they
-were intended to be displayed, if the encoding format is known). These
-files are also frequently output by databases, and may have different
-file extensions. The table below summarizes the main file types you may
-encounter.</p>
-<section><h2 class="section-heading" id="marc-file-types">MARC file types<a class="anchor" aria-label="anchor" href="#marc-file-types"></a></h2>
-<hr class="half-width"><p>MarcEdit recognizes the following MARC file types:</p>
-<table class="table"><caption>MaRC File Types</caption>
-<colgroup><col width="17%"><col width="6%"><col width="76%"></colgroup><thead><tr class="header"><th>File type</th>
-<th align="center">File extension</th>
-<th>Usage</th>
-</tr></thead><tbody><tr class="odd"><td>Binary MARC file</td>
-<td align="center"><code>mrc</code></td>
-<td>File format typically used in an ILS or LSP. Other file extensions
-provided by vendors (ex. marc, dat, bin) are equivalent. Binary is
+<section><h2 class="section-heading" id="understanding-marc-21-in-marcedit">Understanding MARC 21 in MarcEdit<a class="anchor" aria-label="anchor" href="#understanding-marc-21-in-marcedit"></a></h2>
+<hr class="half-width"><div id="marc-file-types" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="marc-file-types" class="callout-inner">
+<h3 class="callout-title">MARC file types</h3>
+<div class="callout-content">
+<p>MarcEdit recognizes the following MARC file types:</p>
+<table class="table"><tr><td>
+<strong>File type</strong>
+</td>
+<td>
+<strong>File extension</strong>
+</td>
+<td>
+<strong>Usage</strong>
+</td>
+</tr><tr><td>
+Binary MARC file
+</td>
+<td>
+mrc
+</td>
+<td>
+File format typically used in an ILS or LSP. Other file extensions
+provided by vendors (ex. marc, dat, bin) are equivalent. Binary is a
 format consisting of a series of sequential bytes, each of which is
-eight bits in length.</td>
-</tr><tr class="even"><td>MARCEdit Mnemonic file</td>
-<td align="center"><code>mrk</code></td>
-<td>File format used by MarcEdit that is a human readable version of the
-binary file.</td>
-</tr><tr class="odd"><td>MARC UTF-8 Text File</td>
-<td align="center"><code>mrk8</code></td>
-<td>Legacy file format for MARC mnemonic files saved with UTF8
-encoding.</td>
-</tr><tr class="even"><td>MARCXML file</td>
-<td align="center"><code>xml</code></td>
-<td>A MARC file expressed in the eXtensible Markup format or a
-text-based format for representing structured information.</td>
-</tr></tbody></table><p>To work with a MARC file in the MARCEditor your file needs to be in
-MARC mnemonic format. If you have a binary file, then that file needs to
-be converted to the mnemonic format.</p>
+eight bits in length.
+</td>
+</tr><tr><td>
+Mnemonic MARC Text File
+</td>
+<td>
+mrk
+</td>
+<td>
+File format used by MarcEdit that is a human readable version of the
+binary file.
+</td>
+</tr><tr><td>
+OCLC DAT binary file
+</td>
+<td>
+dat
+</td>
+<td>
+File format used by OCLC, especially on export to a local computer. The
+export .dat file is a binary MARC21 UTF-8 file.
+</td>
+</tr><tr><td>
+MARC UTF-8 Text File
+</td>
+<td>
+mrk8
+</td>
+<td>
+Legacy file format for MARC mnemonic files saved with UTF8 encoding.
+</td>
+</tr><tr><td>
+MARCXML file
+</td>
+<td>
+xml
+</td>
+<td>
+A MARC file expressed in the eXtensible Markup format or a text-based
+format for representing structured information.
+</td>
+</tr></table><p>To work with a MARC file in the MARCEditor your file needs to be in
+MARC mnemonic format. If you only have a binary file, then that file
+needs to be converted to the mnemonic format.</p>
+</div>
+</div>
+</div>
 <div class="section level3">
-<h3 id="marcedits-marc-conversion-tools">MARCEdit’s MaRC Conversion Tools<a class="anchor" aria-label="anchor" href="#marcedits-marc-conversion-tools"></a></h3>
-<p>To work with MARC binary data files, or to convert between metadata
-formats for library bibliographic data recognized by MarcEdit, click on
-the MARC Tools icon that has the crossed hammer and spanner in the upper
-left hand corner of the main menu. The available features are:</p>
-<ul><li>
-<code>MarcBreaker</code>: This “breaks” the MARC binary file into a
-readable (mnemonic) format that can be edited in the MarcEditor.</li>
-<li>
-<code>MarcMaker</code>: This takes the readable (mnemonic) format
-MARC data file and creates the MARC binary file.</li>
-<li>
-<code>MARC21 to MARC21XML</code>: This converts a MARC21 file to
-MARC21XML.</li>
-<li>
-<code>MARC21XML to MARC21</code>: This converts a MARC21XML file to
-a MARC21 binary file.</li>
-<li>
-<code>MARC to JSON</code>: This converts a MARC21 file to a JSON
-file.</li>
-<li>
-<code>JSON to MARC</code>: This converts a JSON file to a MARC21
-file.</li>
-<li>
-<code>JSON to XML</code>: This converts a JSON file to XML.</li>
-<li>
-<code>XML to JSON</code>: This converts an XML file to JSON.</li>
+<h3 id="marc-tools">MARC Tools<a class="anchor" aria-label="anchor" href="#marc-tools"></a></h3>
+<p>To work with MARC data files or convert between metadata formats for
+library bibliographic data recognized by MarcEdit, click on the MARC
+Tools icon that has the crossed hammer and spanner in the upper left
+hand corner of the main menu. The available features are:</p>
+<ul><li>MarcBreaker: This “breaks” the MARC binary file into a readable
+(mnemonic) format that can be edited in the MarcEditor.</li>
+<li>MarcMaker: This takes the readable (mnemonic) format MARC data file
+and creates the MARC binary file.</li>
+<li>MARC21 to MARC21XML: This converts a MARC21 file to MARC21XML.</li>
+<li>MARC21XML to MARC21: This converts a MARC21XML file to a MARC21
+binary file.</li>
+<li>MARC to JSON: This converts a MARC21 file to a JSON file.</li>
+<li>JSON to MARC: This converts a JSON file to a MARC21 file.</li>
+<li>JSON to XML: This converts a JSON file to XML.</li>
+<li>XML to JSON: This converts an XML file to JSON.</li>
 </ul><p>The conversions from one encoding standard to another, as in MARC21
-to MARC21XML, rely on eXtensible stylesheet transformations, or XSLT.
-MarcEdit comes with several default stylesheets based on those
-maintained by the Library of Congress. If you are familiar with XSLT,
-you can also create your own.</p>
+to MARC21XML, rely on eXtensible stylesheets. MarcEdit comes with
+several default stylesheets which come from those maintained by the
+Library of Congress. If you are familiar with stylesheets, you can also
+create your own.</p>
 <div id="character-encoding" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="character-encoding" class="callout-inner">
 <h3 class="callout-title">Character Encoding</h3>
 <div class="callout-content">
@@ -496,31 +523,20 @@ MarcEdit Field Guide</a></p>
 </div>
 </div>
 </div>
-<div id="break-a-marc-binary-file" class="callout challenge">
+<div id="break-a-marc-binary-file" class="callout checklist">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="check-square"></i>
 </div>
+<span class="callout-header">Checklist</span>
 <div id="break-a-marc-binary-file" class="callout-inner">
 <h3 class="callout-title">Break a MARC Binary File</h3>
 <div class="callout-content">
-<p>Use MarcEdit’s “Mark Breaker” to transform the binary MARC data file
-(<code>.dat</code>) into the MARC mnemonic “human readable”” format
-(<code>.mrk</code>). Expand the elements below for the step-by-step
-guide.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1">
-  Transform a MARC binary file for use in the MarcEditor
-  </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<ol style="list-style-type: decimal"><li>Launch MarcEdit.</li>
-<li>In the main window click on the “MARC Tools” icon.</li>
+<p>To transform our binary MARC file (.mrc) into MARC mnemonic human
+readable format (.mrk), you use the MarcBreaker.</p>
+<div class="section level4">
+<h4 id="break-a-marc--mrc-file-to-use-in-the-marceditor">Break a MARC (.mrc) file to use in the MarcEditor<a class="anchor" aria-label="anchor" href="#break-a-marc--mrc-file-to-use-in-the-marceditor"></a></h4>
+<ol style="list-style-type: decimal"><li>Launch MarcEdit and from the main window click on the MARC Tools
+Icon.</li>
 <li>In the MARC Tools window, Select Operation → MARCBreaker.</li>
 <li>In the field, Select Data to Process, click the file folder image to
 the right of the Open box to browse for the sample MARC data file
@@ -535,19 +551,20 @@ encoding.</li>
 to open in the MarcEditor. Under Results at the bottom of the window you
 will see a count of the records in your file. Click Edit Records to open
 the .mrk file in the MarcEditor.</li>
-</ol><p><strong>Note:</strong> When you break a binary file and create a new
-<code>.mrk</code> file for editing in the MarcEditor, you are making a
-copy of your data in a new file format. As a result, any edits you make
-to the <code>.mrk</code> file in the MarcEditor will not automatically
-be reflected in the original file. We will cover saving and compiling
-(using the MarcMaker) to create an updated file later on.</p>
+</ol><p><strong>Note:</strong> When you break a .mrc file and create a new
+.mrk file for editing in the MarcEditor, you are making a copy of your
+data in a new file format. As a result, any edits you make to the .mrk
+file in the MarcEditor will not automatically be reflected in the
+original .mrc file. We will cover saving and compiling (using the
+MarcMaker) to create an updated .mrc file in an upcoming lesson.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="marc-record-layout-in-the-marceditor">MARC Record layout in the MarcEditor<a class="anchor" aria-label="anchor" href="#marc-record-layout-in-the-marceditor"></a></h2>
-<hr class="half-width"><p>You should now see the MARC records from the file displaying in the
+<div class="section level3">
+<h3 id="marc-record-layout-in-the-marceditor">MARC Record layout in the MarcEditor<a class="anchor" aria-label="anchor" href="#marc-record-layout-in-the-marceditor"></a></h3>
+<p>You should now see the MARC records from the file displaying in the
 MarcEditor:</p>
 <figure><img src="../fig/marc_sample_data.png" alt="MarcEditor screen with file open" class="figure mx-auto d-block"></figure><p>The MarcEditor displays the records in what is called the ‘Mnemonic
 MARC Text File’ format (file extension *.mrk). Each line in the file
@@ -597,6 +614,7 @@ codes and the subfield text.
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
+<span class="callout-header">Callout</span>
 <div id="marc-syntax-in-the-marceditor" class="callout-inner">
 <h3 class="callout-title">MARC syntax in the MarcEditor</h3>
 <div class="callout-content">
@@ -614,12 +632,14 @@ scroll bar as usual, but to see the next 100 records you need to use the
 Next/Previous page controls which are at the bottom left of the screen.
 The MarcEditor can handle very large files of MARC records, because it
 never tries to load all the records at the same time.</p>
-</section><section><h2 class="section-heading" id="setting-marceditor-preferences">Setting MarcEditor Preferences<a class="anchor" aria-label="anchor" href="#setting-marceditor-preferences"></a></h2>
-<hr class="half-width"><p>You can adjust the number of records displayed per ‘page’ through the
+</div>
+<div class="section level3">
+<h3 id="setting-marceditor-preferences">Setting MarcEditor Preferences<a class="anchor" aria-label="anchor" href="#setting-marceditor-preferences"></a></h3>
+<p>You can adjust the number of records displayed per ‘page’ through the
 MarcEditor preferences which can be accessed through the Edit →
 Preferences menu option from the MarcEditor, or through the ‘Settings’
 icon on the opening screen of MarcEdit.</p>
-<p>Within the MarcEditor preferences you can adjust the font and font
+<p>Within the MarcEditor preferences, you can adjust the font and font
 size within the MarcEditor. You can also set your character encoding
 defaults. If you navigate to File Associations within the Preferences
 window, you can select Associate (<code>*.mrc</code>) files with the
@@ -632,39 +652,81 @@ work with MARC data, you can always go back to the default settings.</p>
 <div class="callout-square">
 <i class="callout-icon" data-feather="check-square"></i>
 </div>
+<span class="callout-header">Checklist</span>
 <div id="reset-settings-for-the-marceditor-in-preferences" class="callout-inner">
-<h3 class="callout-title">Reset settings for the MarcEditor in Preferences</h3>
+<h3 class="callout-title">Reset settings for the MarcEditor in
+Preferences</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Click Edit → Preferences</li>
-<li>Select “MarcEditor” in the Preferences window in the left hand
+<li>Select “MarcEditor” in the Preferences window in the left-hand
 pane</li>
-<li>In the right hand pane, select Set Defaults for either font or font
-size</li>
+<li>In the right-hand pane, under Set MarcEditor Font Properties, select
+Set Defaults</li>
 <li>Click Ok</li>
 </ol></div>
+</div>
+</div>
+<div id="behavior-when-you-reset-your-preferences-and-other-popup-windows" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="behavior-when-you-reset-your-preferences-and-other-popup-windows" class="callout-inner">
+<h3 class="callout-title">Behavior when you reset your preferences and
+other popup windows</h3>
+<div class="callout-content">
+<p>When you click Ok to reset preferences, there is a chance that the
+popup window for Preferences and/or even MarcEdit main menu will close.
+If the MarcEdit main menu closes, sometimes it will reopen. If it does
+not, then click on MarcEdit again on your desktop to reopen the
+application.</p>
+<p>It should be noted that not all MarcEdit popup windows will close
+automatically such as Find, Replace, or the MarcValidator. However, the
+Select Records for Edit temporary editor will close if you click Save.
+These idiosyncracies for each will be covered in their upcoming
+episodes.</p>
+</div>
+</div>
+</div>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
+<p>Note: Some preference updates will force MarcEdit to restart and
+others will not. Also note that in order for some preference changes to
+display (such as updating the MarcEditor font settings), you will need
+to close and reopen the MarcEditor, which would require saving your file
+if you have not done so. Emphasize popup window inconsistencies for
+learners, especially the need to close windows after use for actions
+such as Find and Replace. If learners do not close popup windows as they
+move through exercises, they are more likely to lose their place or get
+confused.</p>
+</div>
+</div>
 </div>
 </div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
+<span class="callout-header">Key Points</span>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
-<ul><li>MARC files may be encoded in a variety of formats and text
-encodings</li>
-<li>MarcEdit can work with many of these differing formats</li>
-<li>The MARC Tools Icon allows you to convert data from one file format
+<ul><li>MarcEdit can work with a variety of file formats</li>
+<li>The MARC Tools Icon allow you to convert data from one file format
 to another</li>
 <li>The MarcEditor works with a MarcEdit specific mnemonic format of
 MARC records (.mrk)</li>
 <li>It is necessary to break a MARC binary file to work with that MARC
-data in the MarcEditor. The extension of these readable MARC files is
-<code>.mrk</code> rather than <code>.mrc</code>
-</li>
-<li>Understanding the format and syntax of the MARC mnemonic format is
-key to working with MarcEdit</li>
+data in the MarcEditor. The extension of these easily readable MARC
+files are .mrk rather than the binary extension of .mrc</li>
+<li>Understanding the layout (syntax) of MARC records in the MarcEditor
+is key to working with the records.</li>
 </ul></div>
+</div>
 </div>
 </div>
 </section></div> <!-- / div.lesson-content -->
@@ -696,15 +758,17 @@ key to working with MarcEdit</li>
 	
         | <a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:jajohnst@umich.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        <a href="https://github.com/morskyjezek/lc-marcedit-2024-revisions/blob/main/" class="external-link">Cite</a>
+        | <a href="mailto:jajohnst@umich.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+		</div>
+		<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.10" class="external-link">sandpaper (0.16.10)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.7" class="external-link">pegboard (0.7.7)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.5" class="external-link">varnish (1.0.5)</a></p>
-			</div>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.0.9)</a></p>
+		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
 		<a href="#top">
@@ -714,10 +778,10 @@ key to working with MarcEdit</li>
   <script type="application/ld+json">
     {
   "@context": "https://schema.org",
-  "@type": "TrainingMaterial",
+  "@type": "LearningResource",
   "@id": "https://morskyjezek.github.io/lc-marcedit-2024-revisions/instructor/03-working-with-MARC-files.html",
   "inLanguage": "en",
-  "dct:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+  "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
   "keywords": "software, data, lesson, The Carpentries, marc, bibliographic",
   "name": "Working with MARC files",
@@ -725,8 +789,8 @@ key to working with MarcEdit</li>
   "url": "https://morskyjezek.github.io/lc-marcedit-2024-revisions/instructor/03-working-with-MARC-files.html",
   "identifier": "https://morskyjezek.github.io/lc-marcedit-2024-revisions/instructor/03-working-with-MARC-files.html",
   "dateCreated": "2024-03-13",
-  "dateModified": "2024-03-13",
-  "datePublished": "2024-12-10"
+  "dateModified": "2026-03-10",
+  "datePublished": "2026-03-10"
 }
 
   </script><script>
