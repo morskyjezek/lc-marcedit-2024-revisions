@@ -26,56 +26,13 @@ exercises: 2
 ### MARC file types
 MarcEdit recognizes the following MARC file types:
 
-<table>
- <tr>
-  <td><strong>File type</strong>
-  </td>
-  <td><strong>File extension</strong>
-  </td>
-  <td><strong>Usage</strong>
-  </td>
- </tr>
- <tr>
-  <td>Binary MARC file
-  </td>
-  <td>mrc
-  </td>
-  <td>File format typically used in an ILS or LSP. Other file extensions provided by vendors (ex. marc, dat, bin) are equivalent. Binary is a format consisting of a series of sequential bytes, each of which is eight bits in length.
-  </td>
- </tr>
- <tr>
-  <td>Mnemonic MARC Text File
-  </td>
-  <td>mrk
-  </td>
-  <td>File format used by MarcEdit that is a human readable version of the binary file.
-  </td>
- </tr>
-  <tr>
-  <td>OCLC DAT binary file
-  </td>
-  <td>dat
-  </td>
-  <td>File format used by OCLC, especially on export to a local computer. The export .dat file is a binary MARC21 UTF-8 file.
-  </td>
- </tr>
- <tr>
-  <td>MARC UTF-8 Text File
-  </td>
-  <td>mrk8
-  </td>
-  <td>Legacy file format for MARC mnemonic files saved with UTF8 encoding.
-  </td>
- </tr>
- <tr>
-  <td>MARCXML file
-  </td>
-  <td>xml
-  </td>
-  <td>A MARC file expressed in the eXtensible Markup format or a text-based format for representing structured information.
-  </td>
- </tr>
- </table>
+| File type | File extension | Usage |
+| -------- | :-: | ------------------------------------ |
+| Binary MARC file | `mrc` | File format typically used in an  ILS or LSP. Other file extensions provided by vendors (ex. marc, dat, bin) are equivalent. Binary is format consisting of a series of sequential bytes, each of which is eight bits in length. |
+| MARCEdit Mnemonic file | `mrk` | File format used by MarcEdit that is a human readable version of the binary file. |
+| MARC UTF-8 Text File | `mrk8` | Legacy file format for MARC mnemonic files saved with UTF8 encoding. |
+| MARCXML file | `xml` | A MARC file expressed in the eXtensible Markup format or a text-based format for representing structured information. |
+
 To work with a MARC file in the MARCEditor your file needs to be in MARC mnemonic format. If you only have a binary file, then that file needs to be converted to the mnemonic format.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
