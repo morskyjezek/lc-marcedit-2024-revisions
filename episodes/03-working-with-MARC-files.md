@@ -6,7 +6,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the difference between mrc and mrk MARC file formats
+- Explain the difference between `.mrc` and `.mrk` MARC file formats
 - Successfully break and open a file of MARC records in the MarcEditor
 - Explain character encoding and its importance
 - Understand how to read a MARC record in the MarcEditor
