@@ -1,6 +1,6 @@
 ---
 title: Working with MARC files
-teaching: 17
+teaching: 18
 exercises: 2
 ---
 
@@ -70,18 +70,22 @@ The conversions from one encoding standard to another, as in MARC21 to MARC21XML
 
 To ensure the integrity of your data you need to select the correct character encoding for your dataset. MarcEdit does not automatically detect character encoding, however, UTF8 is set as the default encoding scheme. You can update the encoding scheme when using the MarcBreaker, or you can update the default in Preferences → MarEditor → Default Encoding. For more information on character encoding and translating from one encoding to another, see [The MarcEdit Field Guide](https://marcedit.reeset.net/learning_marcedit/9-2/dealing-with-character-encodings-in-marcedit/)
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  checklist
+:::::::::::::::::::::::::::::::::::::::  challenge
 
-### Break a MARC Binary File
+## Break a MARC Binary File
 
-To transform our binary MARC file (.mrc) into MARC mnemonic human readable format (.mrk), you use the MarcBreaker.
+Use MarcEdit's "Mark Breaker" to transform the binary MARC data file (`.dat`) into 
+the MARC mnemonic "human readable"" format (`.mrk`). 
+Expand the elements below for the step-by-step guide.
 
-#### Break a MARC (.mrc) file to use in the MarcEditor
+::: solution
 
-1. Launch MarcEdit and from the main window click on the MARC Tools Icon.
+## Transform a MARC binary file for use in the MarcEditor
+
+1. Launch MarcEdit. 
+1. In the main window click on the "MARC Tools" icon.
 2. In the MARC Tools window, Select Operation → MARCBreaker.
 3. In the field, Select Data to Process, click the file folder image to the right of the Open box to browse for the sample MARC data file (.mrc). Double click the found file to select it.
 4. Next, you will need save your file in the MARC mnemonic format (.mrk) by clicking the file folder to the right of the Save As box. Select the location and name you would like to give your new file.
@@ -89,7 +93,8 @@ To transform our binary MARC file (.mrc) into MARC mnemonic human readable forma
 6. Click execute.
 7. Once you click execute the newly created .mrk file will be available to open in the MarcEditor. Under Results at the bottom of the window you will see a count of the records in your file. Click Edit Records to open the .mrk file in the MarcEditor.
 
-**Note:** When you break a .mrc file and create a new .mrk file for editing in the MarcEditor, you are making a copy of your data in a new file format. As a result, any edits you make to the .mrk file in the MarcEditor will not automatically be reflected in the original .mrc file. We will cover saving and compiling (using the MarcMaker) to create an updated .mrc file in an upcoming lesson.
+**Note:** When you break a binary file and create a new `.mrk` file for editing in the MarcEditor, you are making a copy of your data in a new file format. As a result, any edits you make to the `.mrk` file in the MarcEditor will not automatically be reflected in the original file. We will cover saving and compiling (using the MarcMaker) to create an updated file later on.
+::: 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
