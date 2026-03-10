@@ -112,10 +112,10 @@ The MarcEditor displays the records in what is called the 'Mnemonic MARC Text Fi
 This example may be understood as follows:
 
 <table>
-  <tr>   <td><code>=</code>   </td>   <td>Each line/field starts with the '=' sign.
+  <tr>   <td><code>=</code>   </td>   <td>The equal sign acts as a field delimiter. Each line begins with the `=` sign and this denotes a new MaRC field.
    </td>
   </tr>
-  <tr>   <td><code>245</code>   </td>   <td>The '=' is followed immediately by the three character MARC field code.
+  <tr>   <td><code>245</code>   </td>   <td>Immediately following `=` is the three-character code for the MaRC field.
    </td>
   </tr>
   <tr>   <td><code>[two spaces]</code>   </td>   <td>The MARC field is always followed by two spaces.
