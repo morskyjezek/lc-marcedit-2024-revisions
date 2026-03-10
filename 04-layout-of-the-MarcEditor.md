@@ -33,13 +33,13 @@ The MarcEditor has a robust set of features available via the top level menu. Fe
 
 Each top level menu heading contains so many gems. Below are some highlights of those features that are frequently used when working with a set of MARC data.
 
-File
+#### File
 
 - Save, Save As, Open, Recent: This is where you will find those important functions of saving, saving as, opening up a recent file, or opening a new file.
 - Select Records for Edit: This is where you can select a subset of your data to work with.
 - Compile File: This is the same function as MarcMaker, meaning that the readable MARC data file (.mrk) being edited in the MarcEditor will be converted to a MARC binary file (.mrc).
 
-Edit
+#### Edit
 
 - Find and Replace: You can find or find and replace just on the current page or in the entire file.
 - Edit Shortcuts: This is where you can change the case, find records that have a missing MARC field or duplicate MARC field, or find fields with a missing word.
@@ -47,17 +47,18 @@ Edit
 - Insert/Edit 006 or 008: This will open a form to easily insert or edit these fixed fields.
 - Delete Record: You can delete one or more records in a range or based on invalid encoding characters.
 
-Fonts
+#### Fonts
+
 If you need to change the font and size for the current MARC data you are working on in the MarcEditor, this is the place to do that.
 
-Reports
+#### Reports
 
 - Create a custom report
 - Get a count of all the MARC Fields in the MARC Data
 - Get a count of the records based on type (book, serials, video recordings, etc.)
 - MARCValidator
 
-Tools
+#### Tools
 
 - Add/Delete Marc Fields
 - Edit subfields
@@ -66,7 +67,9 @@ Tools
 - RDA Helper
 - Sort By
 
-OCLC WorldCat: Requires OCLC Integration Setup
+#### OCLC WorldCat 
+
+*Note:* this menu requires set up for OCLC Integration (a service provided by the Online Computer Library Center, or OCLC).
 
 - Search WorldCat
 - Add/Delete/Update OCLC Bibliographic Data
@@ -80,5 +83,3 @@ OCLC WorldCat: Requires OCLC Integration Setup
 - The MarcEditor can be used to perform one task at a time or automate a set of tasks for particular types of MARC files
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

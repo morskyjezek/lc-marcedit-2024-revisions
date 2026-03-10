@@ -40,7 +40,7 @@ From the Downloads page, click on [Windows Build Options](https://marcedit.reese
 - If the installation is being done via distributed software or via a distribution client like Microsoft's SCCM, refer to the packaging tool available on GitHub [https://github.com/reeset/marcedit\_package\_builder](https://github.com/reeset/marcedit_package_builder).
 - Instructions for system administrators have been provided. Also, information on managing MarcEdit installations is available [https://marcedit.reeset.net/managing-marcedit-installations](https://marcedit.reeset.net/managing-marcedit-installations).
 
-### MAC
+### Mac
 
 #### System Requirements
 
@@ -80,7 +80,7 @@ After downloading MarcEdit and once you launch the installation the first time, 
 
 ## Downloading the data
 
-For this lesson, you need to download our sample file from the Library Carpentries MarcEdit GitHub repository. Navigate to [the `episodes/data` folder at this lesson's GitHub page](https://github.com/morskyjezek/lc-marcedit-2024-revisions/tree/main/episodes/data) to download the sample data file: `sample_data_UMPEBC.dat`. Choose that file by clicking on the file name, then click "Download raw file" to the right of the view panel. This is a MARC file from the University of Michigan Press, which contains records of that Press's eBook collection. The file does not have a MARC extension, but the data follows the MARC21 standard and is encoded in UTF-8.
+For this lesson, you need to download our sample file from the Library Carpentries MarcEdit GitHub repository. Navigate to [the `episodes/data` folder at this lesson's GitHub page](https://github.com/morskyjezek/lc-marcedit-umich/tree/main/episodes/data) to download the sample data file: `sample_data_UMPEBC.dat`. Choose that file by clicking on the file name, then click "Download raw file" to the right of the view panel. This is a MARC file from the University of Michigan Press, which contains records of that Press's eBook collection. The file does not have a MARC extension, but the data follows the MARC21 standard and is encoded in UTF-8.
 
 ### Step by step
 
