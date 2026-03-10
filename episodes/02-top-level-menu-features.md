@@ -19,14 +19,12 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-<<<<<<< HEAD
-## Top Level Menu Features
-=======
 ## Top Level Menu Features in MarcEdit
 
 :::::::::::::::::::::::::::::::::::::: instructor
 
 Note: A number of differences have been noted in the Top Level Menu design and features for Mac users in this lesson:
+
 - Help is in the top menu bar, not in the window
 - Preferences gearbox is located on the bottom right hand corner of the main window
 - Add a shortcut is not available on a Mac
@@ -34,7 +32,6 @@ Note: A number of differences have been noted in the Top Level Menu design and f
 - File association settings are not available on a Mac
   
 :::::::::::::::::::::::::::::::::::::::::::::::::
->>>>>>> a9c8012e5cffdd6df811d986853271833fcbc963
 
 When you launch MarcEdit, the main window opens. From here, you can access the suite of MarcEdit tools, features, plug-ins, quick links, or help.
 
@@ -54,11 +51,7 @@ The Tools menu allows you to access a number of different basic and advanced fea
 - MARC Processing Tools, including MARCsplit, MARCcompare, MARCjoin, MARCmerge, find duplicate records, RDA Helper, or MARCValidator
 - Preferences
 
-<<<<<<< HEAD
-You may notice that there are both shortcuts, linked icons, and menu options that lead to the same features or tools. For example, to update your preferences, you can go to Tools → Preferences, use the keyboard shortcut of `Ctrl`+`Shift`+`P`, or click on the gearbox in the upper left hand corner of the main window.
-=======
 One thing you will notice is that there are both shortcuts, linked icons, and menu options that lead to the same features or tools. For example, to update your preferences, you can go to Tools → Preferences, use the keyboard shortcut of Ctrl+Shift+P, or click on the gearbox in the upper left-hand corner of the main window.
->>>>>>> a9c8012e5cffdd6df811d986853271833fcbc963
 
 #### Preferences
 
@@ -84,11 +77,7 @@ Note: The following exercise is simply to demonstrate adding a shortcut to the m
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-<<<<<<< HEAD
-## What other tools or features can be changed in Preferences?
-=======
 ### Name three other tools or features that can be changed in Preferences.
->>>>>>> a9c8012e5cffdd6df811d986853271833fcbc963
 
 :::::::::::::::  solution
 
@@ -136,5 +125,3 @@ MarcEdit remembers what you did last. You can see this history in the Quick Link
 - Preferences can be accessed using the gearbox icon, selecting Tools → Preferences, or by using the keyboard shortcut Ctrl+Shift+P
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
