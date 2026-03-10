@@ -3,7 +3,13 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
-**This Library Carpentry lesson introduces people working in library- and information-related roles to working with MARC data in MarcEdit. At the conclusion of the lesson you will understand what the MarcEdit software does and how to use the MarcEdit software to work with MARC data files.**
+This Library Carpentry lesson introduces people working in library- and information-related roles
+to working with MaRC data using a software tool called MarcEdit.
+At the conclusion of the lesson you will understand what the MarcEdit software does
+and how to use the MarcEdit software to work with MaRC data files.
+MaRC files are a frequently used format to transfer and encode bibliographic data
+in libraries, and the lesson assumes that the learner has a basic understanding
+of library catalogs, cataloging practices, and where such data might be found or used.
 
 
 <!-- this is an html comment -->
