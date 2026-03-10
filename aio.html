@@ -693,7 +693,7 @@ changed in Preferences.</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Click on the gear icon in the main window or go to Tools →
@@ -813,117 +813,98 @@ MarcEditor</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="understanding-marc-21-in-marcedit">Understanding MARC 21 in MarcEdit<a class="anchor" aria-label="anchor" href="#understanding-marc-21-in-marcedit"></a>
+<p>The MaRC format, or Machine Readable Cataloging format, is and old
+file type. The base structure of these files was developed in the 1960s
+and 1970s, and it was originally structured to be stored on magnetic
+tape data storage. Today, the files are generally stored in a binary
+bitstream, which is not easily read without significant effort to
+“decode” the file. These files are called “binary” files (even though in
+the case of the MARC format, most of the characters can be read as they
+were intended to be displayed, if the encoding format is known). These
+files are also frequently output by databases, and may have different
+file extensions. The table below summarizes the main file types you may
+encounter.</p>
+<section><h2 class="section-heading" id="marc-file-types">MARC file types<a class="anchor" aria-label="anchor" href="#marc-file-types"></a>
 </h2>
 <hr class="half-width">
-<div id="marc-file-types" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="marc-file-types" class="callout-inner">
-<h3 class="callout-title">MARC file types</h3>
-<div class="callout-content">
-<p>MarcEdit recognizes the following MARC file types:</p>
+<p>MarcEdit can recognize and work with the following MARC file
+types:</p>
 <table class="table">
+<caption>MaRC file types</caption>
+<colgroup>
+<col width="17%">
+<col width="6%">
+<col width="76%">
+</colgroup>
+<thead><tr>
+<th>File type</th>
+<th align="center">File extension</th>
+<th>Usage</th>
+</tr></thead>
+<tbody>
 <tr>
-<td>
-<strong>File type</strong>
-</td>
-<td>
-<strong>File extension</strong>
-</td>
-<td>
-<strong>Usage</strong>
-</td>
-</tr>
-<tr>
-<td>
-Binary MARC file
-</td>
-<td>
-mrc
-</td>
-<td>
-File format typically used in an ILS or LSP. Other file extensions
-provided by vendors (ex. marc, dat, bin) are equivalent. Binary is a
+<td>Binary MARC file</td>
+<td align="center"><code>mrc</code></td>
+<td>File format typically used in an ILS or LSP. Other file extensions
+provided by vendors (ex. marc, dat, bin) are equivalent. Binary is
 format consisting of a series of sequential bytes, each of which is
-eight bits in length.
-</td>
+eight bits in length.</td>
 </tr>
 <tr>
-<td>
-Mnemonic MARC Text File
-</td>
-<td>
-mrk
-</td>
-<td>
-File format used by MarcEdit that is a human readable version of the
-binary file.
-</td>
+<td>MARCEdit Mnemonic file</td>
+<td align="center"><code>mrk</code></td>
+<td>File format used by MarcEdit that is a human readable version of the
+binary file.</td>
 </tr>
 <tr>
-<td>
-OCLC DAT binary file
-</td>
-<td>
-dat
-</td>
-<td>
-File format used by OCLC, especially on export to a local computer. The
-export .dat file is a binary MARC21 UTF-8 file.
-</td>
+<td>MARC UTF-8 Text File</td>
+<td align="center"><code>mrk8</code></td>
+<td>Legacy file format for MARC mnemonic files saved with UTF8
+encoding.</td>
 </tr>
 <tr>
-<td>
-MARC UTF-8 Text File
-</td>
-<td>
-mrk8
-</td>
-<td>
-Legacy file format for MARC mnemonic files saved with UTF8 encoding.
-</td>
+<td>MARCXML file</td>
+<td align="center"><code>xml</code></td>
+<td>A MARC file expressed in the eXtensible Markup format or a
+text-based format for representing structured information.</td>
 </tr>
-<tr>
-<td>
-MARCXML file
-</td>
-<td>
-xml
-</td>
-<td>
-A MARC file expressed in the eXtensible Markup format or a text-based
-format for representing structured information.
-</td>
-</tr>
-</table>
+</tbody>
+</table></section><section><h2 class="section-heading" id="understanding-marc-21-in-marcedit">Understanding MARC 21 in MarcEdit<a class="anchor" aria-label="anchor" href="#understanding-marc-21-in-marcedit"></a>
+</h2>
+<hr class="half-width">
 <p>To work with a MARC file in the MARCEditor your file needs to be in
 MARC mnemonic format. If you only have a binary file, then that file
 needs to be converted to the mnemonic format.</p>
-</div>
-</div>
-</div>
 <div class="section level3">
-<h3 id="marc-tools">MARC Tools<a class="anchor" aria-label="anchor" href="#marc-tools"></a>
+<h3 id="marcedits-conversion-tools">MarcEdit’s Conversion Tools<a class="anchor" aria-label="anchor" href="#marcedits-conversion-tools"></a>
 </h3>
-<p>To work with MARC data files or convert between metadata formats for
-library bibliographic data recognized by MarcEdit, click on the MARC
-Tools icon that has the crossed hammer and spanner in the upper left
-hand corner of the main menu. The available features are:</p>
+<p>To work with MARC binary data files, or to convert between metadata
+formats for library bibliographic data recognized by MarcEdit, click on
+the MARC Tools icon that has the crossed hammer and spanner in the upper
+left hand corner of the main menu. The available features are:</p>
 <ul>
-<li>MarcBreaker: This “breaks” the MARC binary file into a readable
-(mnemonic) format that can be edited in the MarcEditor.</li>
-<li>MarcMaker: This takes the readable (mnemonic) format MARC data file
-and creates the MARC binary file.</li>
-<li>MARC21 to MARC21XML: This converts a MARC21 file to MARC21XML.</li>
-<li>MARC21XML to MARC21: This converts a MARC21XML file to a MARC21
-binary file.</li>
-<li>MARC to JSON: This converts a MARC21 file to a JSON file.</li>
-<li>JSON to MARC: This converts a JSON file to a MARC21 file.</li>
-<li>JSON to XML: This converts a JSON file to XML.</li>
-<li>XML to JSON: This converts an XML file to JSON.</li>
+<li>
+<code>MarcBreaker</code>: This “breaks” the MARC binary file into a
+readable (mnemonic) format that can be edited in the MarcEditor.</li>
+<li>
+<code>MarcMaker</code>: This takes the readable (mnemonic) format
+MARC data file and creates the MARC binary file.</li>
+<li>
+<code>MARC21 to MARC21XML</code>: This converts a MARC21 file to
+MARC21XML.</li>
+<li>
+<code>MARC21XML to MARC21</code>: This converts a MARC21XML file to
+a MARC21 binary file.</li>
+<li>
+<code>MARC to JSON</code>: This converts a MARC21 file to a JSON
+file.</li>
+<li>
+<code>JSON to MARC</code>: This converts a JSON file to a MARC21
+file.</li>
+<li>
+<code>JSON to XML</code>: This converts a JSON file to XML.</li>
+<li>
+<code>XML to JSON</code>: This converts an XML file to JSON.</li>
 </ul>
 <p>The conversions from one encoding standard to another, as in MARC21
 to MARC21XML, rely on eXtensible stylesheets. MarcEdit comes with
@@ -949,22 +930,31 @@ MarcEdit Field Guide</a></p>
 </div>
 </div>
 </div>
-<div id="break-a-marc-binary-file" class="callout checklist">
+<div id="break-a-marc-binary-file" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="check-square"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Checklist</span>
+<span class="callout-header">Challenge</span>
 <div id="break-a-marc-binary-file" class="callout-inner">
 <h3 class="callout-title">Break a MARC Binary File</h3>
 <div class="callout-content">
-<p>To transform our binary MARC file (.mrc) into MARC mnemonic human
-readable format (.mrk), you use the MarcBreaker.</p>
-<div class="section level4">
-<h4 id="break-a-marc--mrc-file-to-use-in-the-marceditor">Break a MARC (.mrc) file to use in the MarcEditor<a class="anchor" aria-label="anchor" href="#break-a-marc--mrc-file-to-use-in-the-marceditor"></a>
-</h4>
+<p>Use MarcEdit’s “Mark Breaker” to transform the binary MARC data file
+(<code>.dat</code>) into the MARC mnemonic “human readable”” format
+(<code>.mrk</code>). Expand the elements below for the step-by-step
+guide.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Transform a MARC binary file for use in the MarcEditor </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
 <ol style="list-style-type: decimal">
-<li>Launch MarcEdit and from the main window click on the MARC Tools
-Icon.</li>
+<li>Launch MarcEdit.</li>
+<li>In the main window click on the “MARC Tools” icon.</li>
 <li>In the MARC Tools window, Select Operation → MARCBreaker.</li>
 <li>In the field, Select Data to Process, click the file folder image to
 the right of the Open box to browse for the sample MARC data file
@@ -980,12 +970,12 @@ to open in the MarcEditor. Under Results at the bottom of the window you
 will see a count of the records in your file. Click Edit Records to open
 the .mrk file in the MarcEditor.</li>
 </ol>
-<p><strong>Note:</strong> When you break a .mrc file and create a new
-.mrk file for editing in the MarcEditor, you are making a copy of your
-data in a new file format. As a result, any edits you make to the .mrk
-file in the MarcEditor will not automatically be reflected in the
-original .mrc file. We will cover saving and compiling (using the
-MarcMaker) to create an updated .mrc file in an upcoming lesson.</p>
+<p><strong>Note:</strong> When you break a binary file and create a new
+<code>.mrk</code> file for editing in the MarcEditor, you are making a
+copy of your data in a new file format. As a result, any edits you make
+to the <code>.mrk</code> file in the MarcEditor will not automatically
+be reflected in the original file. We will cover saving and compiling
+(using the MarcMaker) to create an updated file later on.</p>
 </div>
 </div>
 </div>
@@ -997,10 +987,10 @@ MarcMaker) to create an updated .mrc file in an upcoming lesson.</p>
 <p>You should now see the MARC records from the file displaying in the
 MarcEditor:</p>
 <figure><img src="fig/marc_sample_data.png" alt="MarcEditor screen with file open" class="figure mx-auto d-block"></figure><p>The MarcEditor displays the records in what is called the ‘Mnemonic
-MARC Text File’ format (file extension *.mrk). Each line in the file
-represents a field in a MARC record:</p>
+MARC Text File’ format (file extension <code>.mrk</code>). Each line in
+the file represents a field in a MARC record:</p>
 <pre><code>=245  14$aThe Lord of the Rings /$c J.R.R. Tolkien.</code></pre>
-<p>This example breaks down as follows:</p>
+<p>This example may be understood as follows:</p>
 <table class="table">
 <tr>
 <td>
@@ -2290,7 +2280,7 @@ the <code>856$u</code>.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Go to Tools → Build New Field</li>
@@ -2395,7 +2385,7 @@ abbreviations; Remove the GMD.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Go to Tools in the upper menu in the MarcEditor</li>
@@ -2660,7 +2650,7 @@ helper and removes 9XX fields</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Go to Tools in the upper menu in the MarcEditor</li>
@@ -2721,7 +2711,7 @@ that in your Task.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>Go to Tools in the upper menu in the MarcEditor</li>
