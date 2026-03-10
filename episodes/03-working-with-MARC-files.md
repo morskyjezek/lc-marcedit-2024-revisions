@@ -103,13 +103,13 @@ You should now see the MARC records from the file displaying in the MarcEditor:
 
 ![](fig/marc_sample_data.png){alt='MarcEditor screen with file open'}
 
-The MarcEditor displays the records in what is called the 'Mnemonic MARC Text File' format (file extension \*.mrk). Each line in the file represents a field in a MARC record:
+The MarcEditor displays the records in what is called the 'Mnemonic MARC Text File' format (file extension `.mrk`). Each line in the file represents a field in a MARC record:
 
 ```
 =245  14$aThe Lord of the Rings /$c J.R.R. Tolkien.
 ```
 
-This example breaks down as follows:
+This example may be understood as follows:
 
 <table>
   <tr>   <td><code>=</code>   </td>   <td>Each line/field starts with the '=' sign.
